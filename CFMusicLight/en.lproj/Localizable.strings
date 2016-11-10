@@ -1,0 +1,175 @@
+/* 
+  Localizable.strings
+  CFMusicLight
+
+  Created by cfans on 5/4/16.
+  Copyright © 2016 cfans. All rights reserved.
+*/
+
+"Whether to disconnnect the curent Bluetooth connection" = "Whether to disconnnect the curent Bluetooth connection";
+"Yes" = "Yes";
+"Cancel" = "Cancel";
+"Device" = "Device";
+//共有 90 个中文字符串
+
+/*
+ LGAlarmViewController.m
+ */
+"YES"="YES";
+"NO"="NO";
+//"长按开始"="长按开始";
+"Delete"="Delete";
+"NO"="NO";
+"YES"="YES";
+//"点击了NO按钮"="点击了NO按钮";
+//"长按开始"="长按开始";
+"Delete"="Delete";
+"OK"="OK";
+"cancel"="cancel";
+"关闭时间"="关闭时间";
+"Delete"="Delete";
+"Cancel"="Cancel";
+"点击了NO按钮"="点击了NO按钮";
+"长按开始"="长按开始";
+"打开时间"="打开时间";
+"Delete"="Delete";
+"Cancel"="Cancel";
+"点击了NO按钮"="点击了NO按钮";
+"长按开始"="长按开始";
+"关闭时间"="关闭时间";
+"Delect"="Delete";
+"Cancel"="Cancel";
+"点击了NO按钮"="点击了NO按钮";
+"长按开始"="长按开始";
+"打开时间"="打开时间";
+"Delect"="Delect";
+"Cancel"="Cancel";
+"点击了NO按钮"="点击了NO按钮";
+"组-11"="组-11";
+"点击了弹出按钮"="点击了弹出按钮";
+"Bluetooth not connected"="Bluetooth not connected";
+"点击了取消按钮"="点击了取消按钮";
+"点击了确定按钮%@"="点击了确定按钮%@";
+"点击了确定按钮%@"="点击了确定按钮%@";
+
+"Delete an Alarm first"= "Delete an alarm first";
+/*
+ LightViewController.m
+ */
+"形状-1-2"="形状-1-2";
+"彩灯"="彩灯";
+"Bluetooth not connected"="Bluetooth not connected";
+"Bluetooth not connected"="Bluetooth not connected";
+"Bluetooth not connected"="Bluetooth not connected";
+"Bluetooth not connected"="Bluetooth not connected";
+"第一个%f::::::%f::::%d"="第一个%f::::::%f::::%d";
+"Bluetooth not connected"="Bluetooth not connected";
+
+
+"重新对应lastMusicID:%d"="重新对应lastMusicID:%d";
+
+/*
+ LGMusicPlayViewController.m
+ */
+"暂停"="暂停";
+"打断"="打断";
+"结束打断"="结束打断";
+"重新对应lastMusicID:%d"="重新对应lastMusicID:%d";
+"顺序播放"="顺序播放";
+"列表循环"="列表循环";
+"列表循环"="列表循环";
+"单曲循序"="单曲循序";
+"单曲循序"="单曲循序";
+"随机播放"="随机播放";
+"随机播放"="随机播放";
+"暂停"="暂停";
+"播放"="播放";
+"播放"="播放";
+"继续播放"="继续播放";
+"没有本地音乐"="没有本地音乐";
+"下一首"="下一首";
+"播放"="播放";
+
+
+
+/*
+ ContentCellModel.m
+ */
+"Switch"="switch";
+"Rainbow"="rainbow";
+"Heartbeat"="heartbeat";
+"Candlelight"="Candlelight";
+"Marquee"="Marquee";
+"Stage"="Stage";
+"Escape"="Escape";
+"recording light"="recording light";
+"Melody"="Melody";
+"Random"="Random";
+"Breathing"="Breathing";
+"MAGIC"="MAGIC";
+"WarmBloom"="WarmBloom";
+"BluesElves"="bluesElves";
+"GreenMood"="GreenMood";
+"Happyrhythm"="Happyrhythm";
+"Rotate "="Rotate ";
+"Red"="Red";
+"Green"="Green";
+"Blue"="Blue";
+"DeleteTime"="DeleteTime";
+
+/*
+ Tool.m
+ */
+"点击了page3"="点击了page3";
+"取消"="取消";
+"确定"="确定";
+"ChoosePlayModes"="ChoosePlayModes";
+
+
+"No local music"="No local music";
+
+"AddAlarm"="AddAlarm";
+
+
+"Delete an alarm second"= "Delete an alarm second";
+
+"DeleteAlarmFirst"="DeleteAlarmFirst";
+
+"DeleteAlarmSecond"="DeleteAlarmSecond";
+
+//新增
+"AddTime"="AddTime";
+"MusicList"="Music List";
+"Bluetooth Is Connected"="Bluetooth Is Connected";
+"No local Music"="No local Music";
+"ClickConnectionBLE"="ClickConnectionBLE";
+
+
+//音乐主界面四个按钮
+
+"MusicBlue"="MusicBlue";
+"MusicRadio"="Radio";
+"TFCard"="TFCard";
+"AUXModel"="AUXModel";
+
+
+
+"蓝牙播放"="BluePlay";
+"FM收音机模式"="TFMusicModel";
+"TF音乐模式"="TFMusicModel";
+"AUX模式"="AUXModel";
+
+"FM正在初始化"="FM is initialized";
+"歌曲列表加载中"="Song list is loading";
+"歌曲列表加载完成"="Song list is loaded";
+"AUX正在初始化"="AUX is initialized";
+
+"请连接蓝牙设备"="Please connect a bluetooth";
+
+"请设置打开时间"="Please Set The Open Time";
+"请设置关闭时间"="Please Set The Close Time";
+
+"请设置闹钟1"="Please Set The Clock 1";
+"请设置闹钟2"="Please Set The Clock 2";
+
+

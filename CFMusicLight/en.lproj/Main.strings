@@ -1,0 +1,128 @@
+
+/* Class = "UINavigationItem"; title = "蓝牙音乐模式"; ObjectID = "2Q3-zE-Jcu"; */
+"2Q3-zE-Jcu.title" = "Bluetooth Play Model";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "37d-pc-rx0"; */
+"37d-pc-rx0.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "定时"; ObjectID = "3eJ-eU-EX1"; */
+"3eJ-eU-EX1.title" = "Set Time";
+
+/* Class = "UILabel"; text = "自动灯光"; ObjectID = "4EZ-s7-SKb"; */
+"4EZ-s7-SKb.text" = "Auto Light";
+
+/* Class = "UILabel"; text = "打开时间："; ObjectID = "5pF-Mq-i4v"; */
+"5pF-Mq-i4v.text" = "Open  Time:";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "6EO-sb-kuR"; */
+"6EO-sb-kuR.title" = "Item";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "8ph-oP-zO0"; */
+"8ph-oP-zO0.text" = "00:00";
+
+/* Class = "UILabel"; text = "87.5"; ObjectID = "A37-G9-DdV"; */
+"A37-G9-DdV.text" = "87.5";
+
+/* Class = "UILabel"; text = "0:00"; ObjectID = "FFa-ac-vxS"; */
+"FFa-ac-vxS.text" = "0:00";
+
+/* Class = "UINavigationItem"; title = "FM收音机"; ObjectID = "FLM-yd-cCX"; */
+"FLM-yd-cCX.title" = "FMRadio";
+
+/* Class = "UILabel"; text = "闹钟"; ObjectID = "GcE-Fn-b0r"; */
+"GcE-Fn-b0r.text" = "Alarm Clock";
+
+/* Class = "UILabel"; text = "108.5"; ObjectID = "HBi-qL-QRH"; */
+"HBi-qL-QRH.text" = "108.5";
+
+/* Class = "UILabel"; text = "打开时间："; ObjectID = "JWY-sA-d2x"; */
+"JWY-sA-d2x.text" = "Open  Time:";
+
+/* Class = "UINavigationItem"; title = "Device"; ObjectID = "K47-xn-rGe"; */
+"K47-xn-rGe.title" = "Device";
+
+/* Class = "UITabBarItem"; title = "定时"; ObjectID = "KWw-su-Ebv"; */
+"KWw-su-Ebv.title" = "Timer";
+
+/* Class = "UITabBarItem"; title = "蓝牙"; ObjectID = "QdS-io-oU1"; */
+"QdS-io-oU1.title" = "Search";
+
+/* Class = "UINavigationItem"; title = "搜索"; ObjectID = "R8q-JQ-AWt"; */
+"R8q-JQ-AWt.title" = "Search";
+
+/* Class = "UINavigationItem"; title = "AUX模式"; ObjectID = "SHL-Mp-fo4"; */
+"SHL-Mp-fo4.title" = "AUXModel";
+
+/* Class = "UILabel"; text = "艺术家"; ObjectID = "Sku-ul-bpX"; */
+"Sku-ul-bpX.text" = "artist";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "VHP-Jg-uLS"; */
+"VHP-Jg-uLS.text" = "00:00";
+
+/* Class = "UINavigationItem"; title = "SDK模式"; ObjectID = "VlP-FB-tkM"; */
+"VlP-FB-tkM.title" = "TFModel";
+
+/* Class = "UINavigationItem"; title = "情景模式"; ObjectID = "VvL-8D-Aj6"; */
+"VvL-8D-Aj6.title" = "Scene Mode";
+
+/* Class = "UILabel"; text = "自动播放"; ObjectID = "YuD-fz-bqz"; */
+"YuD-fz-bqz.text" = "Auto play";
+
+/* Class = "UITabBarItem"; title = "情景"; ObjectID = "d9O-Zv-Ccl"; */
+"d9O-Zv-Ccl.title" = "Scene Mode";
+
+/* Class = "UITabBarItem"; title = "音乐"; ObjectID = "dd7-V7-64t"; */
+"dd7-V7-64t.title" = "Ｍusic";
+
+/* Class = "UINavigationItem"; title = "彩灯"; ObjectID = "hhZ-Lg-ymn"; */
+"hhZ-Lg-ymn.title" = "Color Lights";
+
+/* Class = "UILabel"; text = "00.00"; ObjectID = "iO3-wn-Rqu"; */
+"iO3-wn-Rqu.text" = "00.00";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "jM1-gD-AHf"; */
+"jM1-gD-AHf.text" = "Title";
+
+/* Class = "UILabel"; text = "艺术家"; ObjectID = "jeH-0X-IPN"; */
+"jeH-0X-IPN.text" = "artist";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "kOB-x8-mPD"; */
+"kOB-x8-mPD.title" = "Item";
+
+/* Class = "UILabel"; text = "闹钟1："; ObjectID = "mpI-dD-Twp"; */
+"mpI-dD-Twp.text" = "Time1:";
+
+/* Class = "UIButton"; normalTitle = "蓝牙设置"; ObjectID = "qKz-cM-CcU"; */
+"qKz-cM-CcU.normalTitle" = "Scan Buletooth";
+
+/* Class = "UITabBarItem"; title = "彩灯"; ObjectID = "t1f-5v-qdU"; */
+"t1f-5v-qdU.title" = "Color Light";
+
+/* Class = "UILabel"; text = "0:00"; ObjectID = "uHu-oD-xBF"; */
+"uHu-oD-xBF.text" = "0:00";
+
+/* Class = "UILabel"; text = "关闭时间："; ObjectID = "wSb-b2-CQD"; */
+"wSb-b2-CQD.text" = "Finish Time:";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "wT8-cN-Zrl"; */
+"wT8-cN-Zrl.title" = "Item";
+
+/* Class = "UILabel"; text = "闹钟2："; ObjectID = "yc9-ix-e56"; */
+"yc9-ix-e56.text" = "Time2：";
+
+/* Class = "UILabel"; text = "关闭时间："; ObjectID = "zIe-2A-ty6"; */
+"zIe-2A-ty6.text" = "Finish Time:";
+
+
+
+/* Class = "UILabel"; text = " 照明"; ObjectID = "IuR-TA-84t"; */
+"IuR-TA-84t.text" = "Light";
+
+/* Class = "UILabel"; text = "外控："; ObjectID = "HbX-hI-iKs"; */
+"HbX-hI-iKs.text" = "External";
+
+/* Class = "UILabel"; text = "彩灯"; ObjectID = "DMo-M2-UQZ"; */
+"DMo-M2-UQZ.text" = "ColorLight";
+
+/* Class = "UILabel"; text = "旋律"; ObjectID = "PZf-EJ-DRW"; */
+"PZf-EJ-DRW.text" = "Melody";

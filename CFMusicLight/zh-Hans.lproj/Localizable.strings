@@ -1,0 +1,174 @@
+///* 
+//  Localizable.strings
+//  CFMusicLight
+//
+//  Created by cfans on 5/4/16.
+//  Copyright © 2016 cfans. All rights reserved.
+//*/
+//
+"Whether to disconnnect the curent Bluetooth connection" = "是否断开当前蓝牙连接";
+"Yes" = "确定";
+"Cancel" = "取消";
+"Device" = "设备";
+//
+//
+////共有 90 个中文字符串
+//
+///*
+// LGAlarmViewController.m
+// */
+"NO"="取消";
+"YES"="确定";
+"Delete an Alarm first"="删除闹钟1";
+"OK"="确定";
+"Cancel"="取消";
+"Delete an alarm second"="删除闹钟2";
+"OK"="确定";
+"Cancel"="取消";
+"关闭时间"="关闭时间";
+"Delete"="删除";
+"Cancel"="取消";
+"打开时间"="打开时间";
+"Delete"="删除";
+"Cancel"="取消";
+"关闭时间"="关闭时间";
+"Delete"="删除";
+"Cancel"="取消";
+"打开时间"="打开时间";
+"Delete"="删除";
+"Cancel"="取消";
+"Bluetooth not connected"="蓝牙未连接";
+"DeleteTime"="删除当前设置时间";
+"DeleteAlarmFirst"="删除闹钟1";
+"DeleteAlarmSecond"="删除闹钟2";
+/*
+ LightViewController.m
+"形状-1-2"="形状-1-2";
+"彩灯"="彩灯";
+ */
+
+"Bluetooth not connected"="蓝牙设备未连接";
+"Bluetooth not connected"="蓝牙设备未连接";
+"Bluetooth not connected"="蓝牙设备未连接";
+"Bluetooth not connected"="蓝牙设备未连接";
+//"第一个%f::::::%f::::%d"="第一个%f::::::%f::::%d";
+"Bluetooth not connected"="蓝牙设备未连接";
+//
+///*
+// LGFMViewController.m
+
+"No local Music"="本地没有音乐";
+
+// */
+//"进度条.png"="进度条.png";
+//
+///*
+// LGMusic.m
+// */
+//"重新对应lastMusicID:%d"="重新对应lastMusicID:%d";
+//
+///*
+// LGMusicPlayViewController.m
+// */
+/*
+"暂停"="暂停";
+"打断"="打断";
+"结束打断"="结束打断";
+"重新对应lastMusicID:%d"="重新对应lastMusicID:%d";
+"顺序播放"="顺序播放";
+"列表循环"="列表循环";
+"列表循环"="列表循环";
+"单曲循序"="单曲循序";
+"单曲循序"="单曲循序";
+"随机播放"="随机播放";
+"随机播放"="随机播放";
+"暂停"="暂停";
+"播放"="播放";
+"播放"="播放";
+"继续播放"="继续播放";
+"没有本地音乐"="没有本地音乐";
+"下一首"="下一首";
+"播放"="播放";
+ */
+//
+//
+//
+
+
+
+"Switch"="开关";
+"Rainbow"="彩虹";
+"Heartbeat"="心跳";
+"Candlelight"="烛火";
+"Marquee"="跑马";
+"Stage"="舞台";
+"Escape"="快闪";
+"SlowFlash"="慢闪";
+
+"Melody"="旋律";
+"Random"="随机";
+"Breathing"="呼吸";
+"Magic"="魔幻";
+"WarmBloom"="温馨绽放";
+"BluesElves"="蓝调精灵";
+"GreenMood"="绿色心情";
+"HappyRhythm"="快乐节奏";
+"Rotate"="三色轮转";
+"Red"="红色渐变";
+"Green"="绿色渐变";
+"Blue"="蓝色渐变";
+//
+///*
+// Tool.m
+// */
+//"取消"="取消";
+//"确定"="确定
+"ChoosePlayModes"= "选择播放模式";
+
+"AddAlarm"="添加闹钟";
+
+
+"Bluetooth Is Connected"="蓝牙已连接";
+
+//新增
+"AddTime"="添加时间";
+"MusicList"="音乐列表";
+
+"ClickConnectionBLE"="点击连接蓝牙";
+
+
+//音乐主界面四个按钮
+"musicBlue"="蓝牙连接";
+"musicRadio"="收音机";
+"TFCard"="TF卡";
+"AuxModel"="AUX模式";
+
+
+//音乐主界面四个按钮
+"MusicBlue"="蓝牙连接";
+"MusicRadio"="收音机";
+"TFCard"="TF卡";
+"AUXModel"="AUX模式";
+
+
+"蓝牙播放"= "蓝牙播放";
+"FM收音机模式"="FM收音机模式";
+"TF音乐模式"="TF音乐模式";
+"AUX模式"="AUX模式";
+
+"FM正在初始化"="FM正在初始化";
+"歌曲列表加载中"="歌曲列表加载中";
+"歌曲列表加载完成"="歌曲列表加载完成";
+"AUX正在初始化"="AUX正在初始化";
+
+"请连接蓝牙设备"="请连接蓝牙设备";
+
+//定时界面
+"请设置打开时间"="请设置打开时间";
+"请设置关闭时间"="请设置关闭时间";
+
+"请设置闹钟1"="请设置闹钟1";
+"请设置闹钟2"="请设置闹钟2";
+
+
+
