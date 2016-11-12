@@ -242,17 +242,17 @@ NSString *const LightCloseTime = @"lightcloseTime";
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     
     NSString *lightOpenStr = [userDefault stringForKey:@"lightopenTime"];
-    lightOpenStr = [self isInvalid:lightOpenStr];
+    lightOpenStr = [self isInvalid:lightOpenStr withButton:_Auto_Lig_Open];
     NSString *lightCloseStr =[userDefault stringForKey:@"lightcloseTime"];
-    lightCloseStr = [self isInvalid:lightCloseStr];
+    lightCloseStr = [self isInvalid:lightCloseStr withButton:_Auto_Lig_Close];
     NSString *playOpenStr = [userDefault stringForKey:@"playopenTime"];
-    playOpenStr = [self isInvalid:playOpenStr];
+    playOpenStr = [self isInvalid:playOpenStr withButton:_Auto_PLay_Open];
     NSString *playCloseStr =[userDefault stringForKey:@"playcloseTime"];
-    playCloseStr = [self isInvalid:playCloseStr];
+    playCloseStr = [self isInvalid:playCloseStr withButton:_Auto_PLay_Close];
     NSString *dataStr = [userDefault stringForKey:@"dateStr"];
-    dataStr = [self isInvalid:dataStr];
+    dataStr = [self isInvalid:dataStr withButton:_button];
     NSString *dataStr2 = [userDefault stringForKey:@"CanceldateStr"];
-    dataStr2 = [self isInvalid:dataStr2];
+    dataStr2 = [self isInvalid:dataStr2 withButton:_button1];
     
     
     
@@ -268,10 +268,28 @@ NSString *const LightCloseTime = @"lightcloseTime";
 
 
 //判断是否是无效数据
--(NSString *)isInvalid:(NSString *)str{
+-(NSString *)isInvalid:(NSString *)str withButton:(UIButton *)sender{
     
     if ([str isEqualToString:NSLocalizedString(@"AddTime", nil)] || !str) {
         str = InvalidTime;
+        sender.selected = NO;
+        
+        
+        
+        if (sender.tag == 10) {
+            self.BT_Switch.on = NO;
+        }
+        
+        if (sender.tag == 20) {
+            self.BT_Switch2.on = NO;
+        }
+        
+        
+    }else{
+    
+        sender.selected = YES;
+    
+    
     }
     
     return str;
@@ -1148,13 +1166,13 @@ NSString *const LightCloseTime = @"lightcloseTime";
         }
         
         
-        
-        if (![dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
-            _Auto_Lig_Open.selected = YES;
-        }
-        if (![lightCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
-            _Auto_Lig_Close.selected = YES;
-        }
+//        if (![dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+//            _Auto_Lig_Open.selected = YES;
+//        }
+//        if (![lightCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+//            _Auto_Lig_Close.selected = YES;
+//        }
+
         
         
         
@@ -1265,12 +1283,12 @@ NSString *const LightCloseTime = @"lightcloseTime";
         
         
         
-        if (![dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
-            _Auto_PLay_Open.selected = YES;
-        }
-        if (![playCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
-            _Auto_PLay_Close.selected = YES;
-        }
+//        if (![dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+//            _Auto_PLay_Open.selected = YES;
+//        }
+//        if (![playCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+//            _Auto_PLay_Close.selected = YES;
+//        }
         
         
         
