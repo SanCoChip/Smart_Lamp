@@ -62,7 +62,7 @@
 @implementation LGMusicPlayViewController
 @synthesize SliderPlay;
 @synthesize time;
-@synthesize changeVolume;
+//@synthesize changeVolume;
 
 -(void)initLayout{
     if ([UIScreen mainScreen].bounds.size.height==568) {
@@ -422,10 +422,37 @@
 //        modleNumber = 0;
 //    }
 //    
-    
+    [self initVolume];
     
     
 }
+
+
+
+
+
+-(void)initVolume{
+
+
+    
+
+    float volume = [[NSUserDefaults standardUserDefaults] floatForKey:@"volume"];
+    
+    
+    if (volume) {
+        self.changeVolume.value = volume;
+    }else{
+        self.changeVolume.value = 5;
+    
+    
+    }
+    
+
+
+
+
+}
+
 
 #pragma mark -  添加监听
 -(void)addObserver{
@@ -731,13 +758,52 @@
     
 }
 
-
+#pragma mark -  音量滑竿
 - (IBAction)SliderValue:(id)sender {
    
-    float value= changeVolume.value;
+    float value= _changeVolume.value;
     player.volume=value;
+    
+    
+    //同步系统音量
+    MPMusicPlayerController*mpc = [MPMusicPlayerController applicationMusicPlayer];
+    [mpc setVolume:value/10];
+    
+    
+    
+    
+    
+    NSUserDefaults *userDefalut = [NSUserDefaults standardUserDefaults];
+    [userDefalut setFloat:value forKey:@"volume"];
+    [userDefalut synchronize];
  
 }
+
+
+//外设音量不足时候调用该方法
+//-(void)volume{
+//    
+//    NSInteger a = self.changeVolume.value*15;
+//    
+//    //保存a 再次启动App时 音量和滑竿同步
+//    NSUserDefaults *userDefalut = [NSUserDefaults standardUserDefaults];
+//    [userDefalut setInteger:a forKey:@"volume"];
+//    [userDefalut synchronize];
+//    
+//    NSLog(@"音量大小：a=%ld",a);
+//    Byte bytes[] = {a};
+//    
+//    //    [NSData dataWithBytes:bytes length:1];
+//    NSData *data = [NSData dataWithBytes:bytes length:1];
+//    [_bleManager.bleTool writeValueWithCharacteristic:_bleManager.peripheral andCharacteristic:_bleManager.volumeCharacteristic andValue:data andResponseWriteType:CBCharacteristicWriteWithResponse];
+//}
+
+
+
+
+
+
+
 #pragma  mark ==== 旋律  ====
 
 - (IBAction)Sw_melody:(UISwitch *)sender {
