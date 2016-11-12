@@ -44,6 +44,8 @@ NSString *const LightCloseTime = @"lightcloseTime";
 @property (nonatomic,strong)  UIButton * Auto_PLay_Close;
 @property (nonatomic,strong)  UIButton * Auto_PLay_Open;
 
+
+
 @property (weak, nonatomic) IBOutlet UILabel *LightLabel;//自动灯光
 
 @property (weak, nonatomic) IBOutlet UILabel *PlayerLable;//自动播放
@@ -121,13 +123,15 @@ NSString *const LightCloseTime = @"lightcloseTime";
 
 @end
 
-@implementation
-
-
-LGAlarmViewController
+@implementation LGAlarmViewController
 {
     NSInteger _currentDateTag;
+    
+    
 }
+
+
+
 
 
 
@@ -138,6 +142,10 @@ LGAlarmViewController
     [self initLayout];
     
     [self createLabel];
+    
+    
+    
+    
     
     self.navigationController.tabBarItem.selectedImage = [[UIImage imageNamed:@"定时-点击"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
@@ -189,10 +197,13 @@ LGAlarmViewController
 {
     [super viewWillAppear:animated];
     
+    
+    
+    
     //同步时间
     
     [self sendSystemTimer];
-    
+    usleep(100 * 1000);
     
     
  
@@ -206,6 +217,10 @@ LGAlarmViewController
     
 
     
+    [self SynchronizationState];
+    
+    
+    
 }
 
 
@@ -213,9 +228,54 @@ LGAlarmViewController
 
 
 
+#pragma mark -  同步状态
+-(void)SynchronizationState{
+
+//    [self AutoLight_SW:self.sw_AutomaticLamp];
+//    usleep(100 * 1000);
+//    [self Autoplay_SW:self.sw_AutomaticPlay];
+//    usleep(100 * 1000);
+//    [self Timeo_SW:self.BT_Switch];
+//    usleep(100 * 1000);
+//    [self TimeT_SW:self.BT_Switch2];
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    
+    NSString *lightOpenStr = [userDefault stringForKey:@"lightopenTime"];
+    lightOpenStr = [self isInvalid:lightOpenStr];
+    NSString *lightCloseStr =[userDefault stringForKey:@"lightcloseTime"];
+    lightCloseStr = [self isInvalid:lightCloseStr];
+    NSString *playOpenStr = [userDefault stringForKey:@"playopenTime"];
+    playOpenStr = [self isInvalid:playOpenStr];
+    NSString *playCloseStr =[userDefault stringForKey:@"playcloseTime"];
+    playCloseStr = [self isInvalid:playCloseStr];
+    NSString *dataStr = [userDefault stringForKey:@"dateStr"];
+    dataStr = [self isInvalid:dataStr];
+    NSString *dataStr2 = [userDefault stringForKey:@"CanceldateStr"];
+    dataStr2 = [self isInvalid:dataStr2];
+    
+    
+    
+    [self sendCharacterialRecvieLightTimeWithButton:self.Auto_Lig_Open withCloseBtn:self.Auto_Lig_Close WithDateString:lightOpenStr withCloseStr:lightCloseStr];
+    usleep(100 * 1000);
+    [self sendCharacterialRecviePlayTimeWithButton:self.Auto_PLay_Open withCloseBtn:self.Auto_PLay_Close WithDateString:playOpenStr withCloseStr:playCloseStr];
+    usleep(100 * 1000);
+    [self sendCharacterialRecvieOpenTimeWithButton:self.button WithDateString:dataStr];
+    usleep(100 * 1000);
+    [self sendCharacterialRecvieTimeWithButton:self.button1 WithDateString:dataStr2];
+
+}
 
 
-
+//判断是否是无效数据
+-(NSString *)isInvalid:(NSString *)str{
+    
+    if ([str isEqualToString:NSLocalizedString(@"AddTime", nil)] || !str) {
+        str = InvalidTime;
+    }
+    
+    return str;
+}
 
 
 
@@ -1088,9 +1148,25 @@ LGAlarmViewController
         }
         
         
+        
+        if (![dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+            _Auto_Lig_Open.selected = YES;
+        }
+        if (![lightCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+            _Auto_Lig_Close.selected = YES;
+        }
+        
+        
+        
         if ([dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)] && [lightCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)] ) {
             
-            [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置打开时间", nil)];
+            
+            
+                [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置打开时间", nil)];
+            
+            
+            
+          
             sender.on = NO;
             
             
@@ -1188,10 +1264,25 @@ LGAlarmViewController
         }
         
         
+        
+        if (![dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+            _Auto_PLay_Open.selected = YES;
+        }
+        if (![playCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
+            _Auto_PLay_Close.selected = YES;
+        }
+        
+        
+        
+        
+        
         //如果两个都没有值
         if ([dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)] && [playCloseStr isEqualToString:NSLocalizedString(@"AddTime", nil)]) {
             
-            [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置打开时间", nil)];
+            
+                 [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置打开时间", nil)];
+            
+           
             sender.on = NO;
             
             
@@ -1347,11 +1438,8 @@ LGAlarmViewController
         [_alarmBtn_2 addTarget:self action:@selector(clickPickerDate:) forControlEvents:UIControlEventTouchUpInside];
         
         
-        
-        
-        
         _button1.tag = 20;
-#pragma mark - 新增加内容
+
         
         NSUserDefaults *userDefaalt = [NSUserDefaults standardUserDefaults];
         NSString *cancelstr = [userDefaalt stringForKey:@"CanceldateStr"];
@@ -1542,8 +1630,18 @@ LGAlarmViewController
         }
         
         
+        
+       
+        
+        
+        
+        
         if ([dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)] ) {
-            [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置闹钟1", nil)];
+           
+            
+                [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置闹钟1", nil)];
+            
+            
             sender.on = NO;
         }
         
@@ -1606,7 +1704,12 @@ LGAlarmViewController
         
         
         if ([dataStr isEqualToString:NSLocalizedString(@"AddTime", nil)] ) {
-            [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置闹钟2", nil)];
+            
+            
+                [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"请设置闹钟2", nil)];
+            
+            
+         
             sender.on = NO;
         }
         else
@@ -1704,6 +1807,7 @@ LGAlarmViewController
     
     _Play_openLable.textColor=[UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1];
     _Play_CloseLabel.textColor=[UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1];
+    
     _Alaem_oneLable.textColor=[UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1];
     _Alaem_twoLable.textColor=[UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1];
     
@@ -1774,23 +1878,31 @@ LGAlarmViewController
 
     
     
-    
-    if (!hour) {
-        hour = 99;
+    if (!openDateStr || [openDateStr isEqualToString:InvalidTime]) {
+        if (!hour) {
+            hour = 99;
+        }
+        
+        if (!minute) {
+            minute = 99;
+        }
     }
     
-    if (!minute) {
-        minute = 99;
-    }
     
     
-    if (!hourPLayClose) {
-        hourPLayClose = 99;
+    if (!CloseDateStr || [CloseDateStr isEqualToString:InvalidTime]) {
+        if (!hourPLayClose) {
+            hourPLayClose = 99;
+        }
+        
+        if (!minutePLayClose) {
+            minutePLayClose = 99;
+        }
+        
     }
     
-    if (!minutePLayClose) {
-        minutePLayClose = 99;
-    }
+
+    
     
     [self setAlarmClockTimeWithType:1 Switch:self.sw_AutomaticLamp.isOn PowerOn:0 OpenHour:hour OpenMin:minute CloseHour:hourPLayClose CloseMin:minutePLayClose];
     
@@ -1834,24 +1946,33 @@ LGAlarmViewController
     NSInteger hourPLayClose  = compsPLayClose.hour;
     NSInteger minutePLayClose = compsPLayClose.minute;
     
-    
-    
-    if (!hour) {
-        hour = 99;
+    //只有当值是空的才重置成99
+    if (!openDateStr || [openDateStr isEqualToString:InvalidTime]) {
+        
+        if (!hour) {
+            hour = 99;
+        }
+        
+        if (!minute) {
+            minute = 99;
+        }
+
     }
     
-    if (!minute) {
-        minute = 99;
-    }
+    if(!CloseDateStr || [CloseDateStr isEqualToString:InvalidTime]){
+        
+        if (!hourPLayClose) {
+            hourPLayClose = 99;
+        }
+        
+        if (!minutePLayClose) {
+            minutePLayClose = 99;
+        }
     
     
-    if (!hourPLayClose) {
-        hourPLayClose = 99;
     }
     
-    if (!minutePLayClose) {
-        minutePLayClose = 99;
-    }
+
     
     
     
@@ -1884,13 +2005,17 @@ LGAlarmViewController
     NSInteger minute = comps.minute;
     
     
-    if (!hour) {
-        hour = 99;
+    if (!datestr || [datestr isEqualToString:InvalidTime]) {
+        if (!hour) {
+            hour = 99;
+        }
+        
+        if (!minute) {
+            minute = 99;
+        }
     }
     
-    if (!minute) {
-        minute = 99;
-    }
+
     
     
     
@@ -1898,6 +2023,8 @@ LGAlarmViewController
     
     
 }
+
+
 
 #pragma 封装发送时间 设置关闭闹钟
 //封装设置时间
@@ -1916,14 +2043,16 @@ LGAlarmViewController
     NSInteger hour = comps.hour;
     NSInteger minute = comps.minute;
     
-    
-    if (!hour) {
-        hour = 99;
+    if (!datestr || [datestr isEqualToString:InvalidTime]) {
+        if (!hour) {
+            hour = 99;
+        }
+        
+        if (!minute) {
+            minute = 99;
+        }
     }
-    
-    if (!minute) {
-        minute = 99;
-    }
+ 
     
     
     [self setAlarmClockTimeWithType:5 Switch:self.BT_Switch2.isOn PowerOn:0 OpenHour:hour OpenMin:minute CloseHour:99 CloseMin:99];
@@ -2032,6 +2161,9 @@ LGAlarmViewController
     
     
 }
+
+
+
 -(void)setAlarmtype:(NSInteger)type Switch:(NSInteger)switcherValue powerOn:(NSInteger)powerOn HourStart:(NSInteger)hourStart minStart:(NSInteger)minStart Second:(NSInteger)second power:(NSInteger)power{
     
     Byte bytes[] = {type,switcherValue,powerOn,hourStart,minStart,second,power};
