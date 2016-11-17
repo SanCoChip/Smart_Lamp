@@ -462,10 +462,38 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didConnectFailedPeripheralNotification:) name:BLEDisconnectPeripheralNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didConnectFailedPeripheralNotification:) name:BLEUpdateStateNotification object:nil];
     
+    
+    
+    //监听A2DP拔插
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioRouteChangedCallBack:) name:AVAudioSessionRouteChangeNotification object:nil];
 
 }
 
 
+
+-(void)audioRouteChangedCallBack:(NSNotification *)notification{
+    
+    NSDictionary *interuptionDict = notification.userInfo;
+    NSInteger routeChangeReason = [[interuptionDict valueForKey:AVAudioSessionRouteChangeReasonKey] integerValue];
+    
+    
+    switch (routeChangeReason) {
+        case AVAudioSessionRouteChangeReasonNewDeviceAvailable:
+            
+//            NSLog(@"耳机插入");
+            break;
+        case AVAudioSessionRouteChangeReasonOldDeviceUnavailable:
+            [self pauseAction:nil];
+//            NSLog(@"耳机拔出，停止播放操作");
+            break;
+        case AVAudioSessionRouteChangeReasonCategoryChange:
+            // 即将播放监听
+            NSLog(@"AVAudioSessionRouteChangeReasonCategoryChange");
+            break;
+    }
+    
+    
+}
 
 
 

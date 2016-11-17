@@ -14,6 +14,7 @@
 #import "SVProgressHUD.h"
 #import "PopupView.h"
 #import "Masonry.h"
+#import <AVFoundation/AVFoundation.h>
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 
 //可以输入字符的长度
@@ -931,7 +932,24 @@ static NSInteger CharacterCount = 21;
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(isConnectPeripheralNotification:) name:BLEIsConnectingNotification object:nil];
+    
+    
+    
+
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

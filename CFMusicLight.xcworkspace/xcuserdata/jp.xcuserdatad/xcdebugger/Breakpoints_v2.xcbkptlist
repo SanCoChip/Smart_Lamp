@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFMusicLight/controller/BLE SET/LGDeviceTableViewController.m"
-            timestampString = "499941039.387114"
+            timestampString = "501040745.922965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1605"
-            endingLineNumber = "1605"
+            startingLineNumber = "1623"
+            endingLineNumber = "1623"
             landmarkName = "-setAlarmClockTimeWithType:Switch:PowerOn:OpenHour:OpenMin:CloseHour:CloseMin:"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFMusicLight/controller/BLE SET/LGDeviceTableViewController.m"
-            timestampString = "499941039.387114"
+            timestampString = "501040745.922965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1710"
-            endingLineNumber = "1710"
+            startingLineNumber = "1728"
+            endingLineNumber = "1728"
             landmarkName = "-subpackageSendData:withPackageLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFMusicLight/controller/BLE SET/LGDeviceTableViewController.m"
-            timestampString = "499941039.387114"
+            timestampString = "501040745.922965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1733"
-            endingLineNumber = "1733"
+            startingLineNumber = "1751"
+            endingLineNumber = "1751"
             landmarkName = "-subpackageSendData:withPackageLength:"
             landmarkType = "7">
          </BreakpointContent>
@@ -162,11 +162,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFMusicLight/controller/BLE SET/LGDeviceTableViewController.m"
-            timestampString = "499941039.387114"
+            timestampString = "501039438.041831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "928"
-            endingLineNumber = "928"
+            startingLineNumber = "929"
+            endingLineNumber = "929"
             landmarkName = "-addBLEObserver"
             landmarkType = "7">
          </BreakpointContent>
@@ -178,27 +178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFMusicLight/controller/BLE SET/LGDeviceTableViewController.m"
-            timestampString = "499941039.387114"
+            timestampString = "501039438.041831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "935"
-            endingLineNumber = "935"
-            landmarkName = "@implementation LGDeviceTableViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CFMusicLight/controller/BLE SET/LGDeviceTableViewController.m"
-            timestampString = "499940514.000446"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>

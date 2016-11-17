@@ -45,19 +45,19 @@
                                 <rect key="frame" x="0.0" y="119" width="375" height="379"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="音乐盘" translatesAutoresizingMaskIntoConstraints="NO" id="cXw-Sa-x9S">
-                                <rect key="frame" x="70" y="148" width="235" height="235"/>
+                                <rect key="frame" x="70" y="129" width="235" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cXw-Sa-x9S" secondAttribute="height" multiplier="2:2" id="bu9-3y-LO9"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="艺术家" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sku-ul-bpX">
-                                <rect key="frame" x="0.0" y="388" width="375" height="16"/>
+                                <rect key="frame" x="0.0" y="374" width="375" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHj-NP-DMZ">
-                                <rect key="frame" x="362" y="423" width="30" height="50"/>
+                                <rect key="frame" x="317.5" y="413.5" width="30" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7XK-fY-wzD"/>
                                     <constraint firstAttribute="width" constant="30" id="fnB-9c-gSJ"/>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-Nb-ml0" userLabel="左">
-                                <rect key="frame" x="282" y="428" width="40" height="40"/>
+                                <rect key="frame" x="237.5" y="418.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="565-In-85u"/>
                                     <constraint firstAttribute="width" constant="40" id="g0H-Hg-wIg"/>
@@ -79,7 +79,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-5q-5cD">
-                                <rect key="frame" x="53" y="428" width="40" height="40"/>
+                                <rect key="frame" x="97.5" y="418.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="6eQ-4G-mzT"/>
                                     <constraint firstAttribute="height" constant="40" id="U3N-uh-jju"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-fg-UeL">
-                                <rect key="frame" x="13" y="437" width="0.0" height="22"/>
+                                <rect key="frame" x="13" y="427.5" width="44.5" height="22"/>
                                 <state key="normal" image="列表循环"/>
                                 <connections>
                                     <action selector="modleAction:" destination="FFy-g8-P5d" eventType="touchUpInside" id="UHK-2h-91h"/>
@@ -132,8 +132,8 @@
                                 <rect key="frame" x="335" y="570" width="25" height="17"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkb-TU-Jan">
-                                <rect key="frame" x="123" y="407" width="129" height="82"/>
-                                <state key="normal" image="d"/>
+                                <rect key="frame" x="167.5" y="388" width="40" height="101"/>
+                                <state key="normal" image="暂停"/>
                                 <state key="selected" image="播放"/>
                                 <connections>
                                     <action selector="playAction:" destination="FFy-g8-P5d" eventType="touchUpInside" id="i9u-97-I4d"/>
@@ -151,7 +151,7 @@
                             <constraint firstAttribute="trailing" secondItem="5eo-Am-43k" secondAttribute="trailing" constant="15" id="0It-YB-O5K"/>
                             <constraint firstItem="HHj-NP-DMZ" firstAttribute="leading" secondItem="cV2-Nb-ml0" secondAttribute="trailing" constant="40" id="1Hd-sz-68l"/>
                             <constraint firstItem="mAn-5q-5cD" firstAttribute="centerY" secondItem="Mxe-fg-UeL" secondAttribute="centerY" id="1rk-mT-IDd"/>
-                            <constraint firstItem="cXw-Sa-x9S" firstAttribute="top" secondItem="pXA-OK-bWk" secondAttribute="bottom" constant="29" id="21v-ru-JoZ"/>
+                            <constraint firstItem="cXw-Sa-x9S" firstAttribute="top" secondItem="pXA-OK-bWk" secondAttribute="bottom" constant="10" id="21v-ru-JoZ"/>
                             <constraint firstItem="cV2-Nb-ml0" firstAttribute="centerY" secondItem="Mxe-fg-UeL" secondAttribute="centerY" id="304-vv-iFC"/>
                             <constraint firstItem="bYq-vc-YhM" firstAttribute="top" secondItem="pXA-OK-bWk" secondAttribute="bottom" id="3JX-7l-4AG"/>
                             <constraint firstItem="rkb-TU-Jan" firstAttribute="centerX" secondItem="bYq-vc-YhM" secondAttribute="centerX" id="7S7-l0-nEL"/>
@@ -166,7 +166,7 @@
                             <constraint firstItem="2R3-1f-N7I" firstAttribute="leading" secondItem="8ph-oP-zO0" secondAttribute="trailing" constant="10" id="MKk-ny-DmV"/>
                             <constraint firstItem="i2d-8t-bVw" firstAttribute="top" secondItem="2Ku-wJ-PHB" secondAttribute="bottom" id="Ma6-Mm-CLR"/>
                             <constraint firstItem="8ph-oP-zO0" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="10" id="MxG-Z2-jdc"/>
-                            <constraint firstItem="Sku-ul-bpX" firstAttribute="top" secondItem="cXw-Sa-x9S" secondAttribute="bottom" constant="5" id="N8L-Gr-jJw"/>
+                            <constraint firstItem="Sku-ul-bpX" firstAttribute="top" secondItem="cXw-Sa-x9S" secondAttribute="bottom" constant="10" id="N8L-Gr-jJw"/>
                             <constraint firstItem="rkb-TU-Jan" firstAttribute="top" secondItem="cXw-Sa-x9S" secondAttribute="bottom" constant="24" id="Pbq-39-FQK"/>
                             <constraint firstItem="5eo-Am-43k" firstAttribute="leading" secondItem="qgB-Ir-hp7" secondAttribute="trailing" constant="20" id="QPz-MT-tgr"/>
                             <constraint firstItem="qgB-Ir-hp7" firstAttribute="top" secondItem="2R3-1f-N7I" secondAttribute="bottom" constant="10" id="RjF-9h-r9C"/>
@@ -1178,7 +1178,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="d" width="375" height="488"/>
         <image name="上一曲" width="17" height="14"/>
         <image name="下一曲" width="17" height="14"/>
         <image name="中性" width="32" height="32"/>
@@ -1193,6 +1192,7 @@
         <image name="情景模式" width="25" height="25"/>
         <image name="搜索" width="50" height="50"/>
         <image name="播放" width="40" height="40"/>
+        <image name="暂停" width="40" height="40"/>
         <image name="白" width="32" height="32"/>
         <image name="矢量智能对象" width="40" height="37"/>
         <image name="矩形-3" width="375" height="164"/>
