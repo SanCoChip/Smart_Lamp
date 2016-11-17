@@ -470,7 +470,7 @@
 }
 
 
-
+#pragma mark -  监听A2DP连接断开事件
 -(void)audioRouteChangedCallBack:(NSNotification *)notification{
     
     NSDictionary *interuptionDict = notification.userInfo;
