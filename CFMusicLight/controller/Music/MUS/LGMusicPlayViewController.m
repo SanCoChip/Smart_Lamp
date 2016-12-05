@@ -18,8 +18,12 @@
 #import "ContentCellModel.h"
 #import "SandBox.h"
 #import "LGSingleLight.h"
+#import "QQMusciVC.h"
+#import "baiduMusicVC.h"
 
-@interface LGMusicPlayViewController () <AVAudioPlayerDelegate> {
+//#import "LGOnlineVC.h"
+
+@interface LGMusicPlayViewController () <AVAudioPlayerDelegate,UIWebViewDelegate> {
     
     AVAudioSession *session;
     NSArray *mediaItems;
@@ -57,11 +61,15 @@
 
 - (void)loadMediaItemsForMediaType:(MPMediaType)mediaType;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UIView *OnlineMusicview;
+
 
 @end
 @implementation LGMusicPlayViewController
 @synthesize SliderPlay;
 @synthesize time;
+
 //@synthesize changeVolume;
 
 -(void)initLayout{
@@ -349,6 +357,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    QQMusciVC*qq =[QQMusciVC new];
+    //分段控制
+    [self segmented:self.segmentedControl];
+    
     
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
      [self.Switch_melody addTarget:self action:@selector(click) forControlEvents:UIControlEventValueChanged];
@@ -744,12 +756,27 @@
     //2.segue    这个参数是在故事版中的跳转到的那条线
     //3.DisplayViewController 是显示界面，也就是目标VC
     //4.destinationViewController  是捕获的目标VC的引用
-    LGMusic* vc = segue.destinationViewController;
-    //设代理
-    vc.delegate = self;
     
-    NSUserDefaults *userDefaults= [NSUserDefaults standardUserDefaults];
-    [userDefaults setInteger:lastMusicID forKey:@"lastMusicKey"];
+    
+    
+    if ([segue.identifier isEqualToString:@"musicVCSegue"]||[segue.identifier isEqualToString:@"baiduVCSegue"]||[segue.identifier isEqualToString:@"HimalayasVCSegue"]||[segue.identifier isEqualToString:@"CoolDogMusicVCSegue"]||[segue.identifier isEqualToString:@"RadioVCSegue"]||[segue.identifier isEqualToString:@"ChildrenEducationVCVCSegue"]) {
+        
+    }else{
+    
+        LGMusic* vc = segue.destinationViewController;
+        //设代理
+        vc.delegate = self;
+        
+        NSUserDefaults *userDefaults= [NSUserDefaults standardUserDefaults];
+        [userDefaults setInteger:lastMusicID forKey:@"lastMusicKey"];
+    }
+    
+   
+    
+    
+    
+    
+    
     
     
 }
@@ -893,6 +920,32 @@
 {
     
     [self pauseAction:nil];
+    
+}
+- (IBAction)segmented:(UISegmentedControl *)sender {
+    
+     NSInteger selectedIndex = sender.selectedSegmentIndex;
+    
+    switch (selectedIndex) {
+        case 0:
+            self.OnlineMusicview.hidden=YES;
+            
+            NSLog(@"点击了0");
+            
+            break;
+            
+        case 1:{
+
+            self.OnlineMusicview.hidden=NO;
+        
+            NSLog(@"点击了1");
+            break;
+        
+        }
+        default:
+            break;
+    }
+    
     
 }
 
