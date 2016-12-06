@@ -2191,8 +2191,7 @@ NSString *const LightCloseTime = @"lightcloseTime";
     
     [self SynchronizationTime:data];
     
-    
-    
+
 }
 
 -(void)SynchronizationTime:(NSData *)valueDate{

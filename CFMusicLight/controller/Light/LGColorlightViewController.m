@@ -394,30 +394,8 @@ int YellowValue;
         
         RGB rgb = MSHSB2RGB(hsb);
         
-//        BOOL Temp1,Temp2,Temp3,Temp4;
-//        Temp1 =(BOOL)rgb.red*0xff;
-//        Temp2 = (BOOL)rgb.green*0xff;
-//        Temp3 = (BOOL)rgb.blue*0xff;
-//        Temp4 = (BOOL)rgb.alpha*0xff;
-//        
-//        NSLog(@"redTemp %lf , greenTemp %lf , blueTemp %lf",rgb.red,rgb.green,rgb.blue);
-//      
-//            
-//            RedTemp =Temp1;
-//            GreenTemp =Temp2;
-//            BLueTemp =Temp3;
-//            WhiterTemp =Temp4;
-        
+
             if (self.SW_state.on) {
-                
-//                if(FLAG)
-//                    whiteValue = 0;
-//                else{
-//                    whiteValue = Slide*255;
-//                }
-//                FLAG = FALSE;
-                
-                
                 
  
                 CGFloat tempValue = _Rgb_SliderValue.value;
@@ -793,8 +771,8 @@ int YellowValue;
 //        [self adjustColorByteRed:0 Green:0 Blue:0 White:2 Yellow:5];
         [self switchLightON];
         
-        self.ColorTempValue.value = 0.43;
-        self.Rgb_SliderValue.value = 0.14;
+        self.ColorTempValue.value = 0.5263;
+        self.Rgb_SliderValue.value = 0.149;
         [self Touch];
         
         

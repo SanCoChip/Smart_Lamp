@@ -33,7 +33,6 @@
     NSIndexPath *lastIndexPath;//最后选择的行,刷新界面的依据
     BOOL ISChangeMusic;//是否重新初始化播放器.YES需要重新初始化播放器，NO不需要
     
-    //    NSTimer *timer;
     BOOL ISSendMusic;
     BOOL StPy;
     
@@ -164,9 +163,8 @@
     [_ImageView stopRotate];
     [player stop];
     [_PlayerButton setImage:[UIImage imageNamed:@"暂停"] forState:UIControlStateNormal];
-//    lastIndexPath=nil;//暂停时lastIndexPath=nil界面不会显示
-    //
-    //    [timer invalidate];
+
+
     
     
 }
@@ -344,7 +342,25 @@
 //    [self audioPlayerDidFinishPlaying:player successfully:NO];
     
     
+    
+    
+
+    MPMusicPlayerController*mpc = [MPMusicPlayerController applicationMusicPlayer];
+    self.changeVolume.value = mpc.volume*10;
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+
 
 
 - (void)viewDidLoad {
@@ -386,10 +402,7 @@
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     
     
-    // 设置标题，设置导航栏左侧按钮，视图背景色
-//    self.title = NSLocalizedStringFromTable(@"MUSICPAGE", @"Localizable", nil);
-    //    [self setupLeftMenuButton];
-    //
+
  //    加载本地音乐数据
     [self loadMediaItemsForMediaType:MPMediaTypeMusic];
     //后台播放 音频设置
@@ -403,7 +416,6 @@
     if([mediaItems count]==0){
         HaveMusic=NO;
         
-        //[SVProgressHUD showErrorWithStatus:NSLocalizedString(@"No local Music", nil)];
         [SVProgressHUD showInfoWithStatus:NSLocalizedString(@"No local Music", nil)];
     }else{
         HaveMusic=YES;
@@ -417,13 +429,11 @@
     //添加监听
     [self addObserver];
     
-//    //初始化模式
-//    if (!modleNumber) {
-//        modleNumber = 0;
-//    }
-//    
-    [self initVolume];
+
     
+    
+    
+//    [self initVolume];
     
 }
 
@@ -433,14 +443,15 @@
 
 -(void)initVolume{
 
-
-    
-
     float volume = [[NSUserDefaults standardUserDefaults] floatForKey:@"volume"];
     
     
+
     if (volume) {
         self.changeVolume.value = volume;
+        
+        
+        
     }else{
         self.changeVolume.value = 5;
     
@@ -466,8 +477,31 @@
     
     //监听A2DP拔插
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioRouteChangedCallBack:) name:AVAudioSessionRouteChangeNotification object:nil];
+    
+    
+    //监听后台回来
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBackActive:)name:UIApplicationDidBecomeActiveNotification object:nil]; //监听是否重新进入程序程序
 
 }
+
+
+
+
+
+
+#pragma mark -  监听后台返回事件
+-(void)applicationDidBackActive:(NSNotification *)notification{
+
+
+    MPMusicPlayerController*mpc = [MPMusicPlayerController applicationMusicPlayer];
+    self.changeVolume.value = mpc.volume*10;
+
+}
+
+
+
+
+
 
 
 #pragma mark -  监听A2DP连接断开事件
@@ -498,13 +532,6 @@
 
 
 
-#pragma  mark ==== 旋律sw监听方法  ====
--(void)click{
-
-//    [SandBox saveBox:@"state" withState:self.Switch_melody.on];
-    
-
-}
 
 #pragma mark ---slider和定时器联动---
 -(void)processChanged
@@ -521,9 +548,7 @@
     
     SliderPlay.value = player.currentTime/player.duration;
     
-    
-    
-    
+
 }
 
 -(void)reSetlastMusicAction{
@@ -588,8 +613,7 @@
     lastIndexPath=nil;//暂停时lastIndexPath=nil界面不会显示
     self.PlayerButton.selected = NO;
     
-    //    [_musicTableView reloadData];
-    //    [timer invalidate];
+
     
     
 }
@@ -599,8 +623,7 @@
     [player stop];
     [_PlayerButton setImage:[UIImage imageNamed:@"暂停"] forState:UIControlStateNormal];
     lastIndexPath=nil;//暂停时lastIndexPath=nil界面不会显示
-//        [_musicTableView reloadData];
-    //    [timer invalidate];
+
     
 }
 
@@ -664,7 +687,7 @@
             
             [player play]; //播放音乐
             
-            //            [timer invalidate];
+           
             
         }else{
             NSError *error;
@@ -692,8 +715,7 @@
             [player prepareToPlay];
             player.meteringEnabled=YES;
             [player play]; //播放音乐
-            //            [timer invalidate];
-//                        timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateMeter) userInfo:nil repeats:YES];
+
         }
         if (!lastIndexPath) {
             lastIndexPath=[NSIndexPath indexPathForRow:lastMusicID inSection:0];
