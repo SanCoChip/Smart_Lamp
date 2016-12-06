@@ -258,6 +258,8 @@
 		A4FF556A1CF459FA00239CC9 /* LGAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF55691CF459FA00239CC9 /* LGAlarmViewController.m */; };
 		A4FFED621D001D84004580CE /* BLE Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FFED611D001D84004580CE /* BLE Tool.m */; };
 		CF831DB51D86864100DD9382 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF831DB41D86864100DD9382 /* Images.xcassets */; };
+		E80F0A0D1DF6B8B400F63893 /* WebviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E80F0A0B1DF6B8B400F63893 /* WebviewVC.m */; };
+		E80F0A101DF6B8F800F63893 /* OnlineMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E80F0A0F1DF6B8F800F63893 /* OnlineMusicCell.m */; };
 		E8CDA7D61DB9BB540068F114 /* LGSynchronizationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDA7D51DB9BB540068F114 /* LGSynchronizationTime.m */; };
 /* End PBXBuildFile section */
 
@@ -752,6 +754,10 @@
 		B266EAF1786643E97F8D9769 /* Pods-CFMusicLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CFMusicLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CFMusicLight/Pods-CFMusicLight.debug.xcconfig"; sourceTree = "<group>"; };
 		CF831DB41D86864100DD9382 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DDB00FC379604C82AAACF83F /* libPods-CFMusicLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CFMusicLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E80F0A0A1DF6B8B400F63893 /* WebviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewVC.h; sourceTree = "<group>"; };
+		E80F0A0B1DF6B8B400F63893 /* WebviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewVC.m; sourceTree = "<group>"; };
+		E80F0A0E1DF6B8F800F63893 /* OnlineMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineMusicCell.h; sourceTree = "<group>"; };
+		E80F0A0F1DF6B8F800F63893 /* OnlineMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineMusicCell.m; sourceTree = "<group>"; };
 		E8CDA7D41DB9BB540068F114 /* LGSynchronizationTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSynchronizationTime.h; sourceTree = "<group>"; };
 		E8CDA7D51DB9BB540068F114 /* LGSynchronizationTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSynchronizationTime.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1564,6 +1570,10 @@
 				A456C3431D1E7FEC00048C07 /* LGMusicPlayViewController.m */,
 				A456C3481D1E7FF900048C07 /* LGMusic.h */,
 				A456C3491D1E7FF900048C07 /* LGMusic.m */,
+				E80F0A0A1DF6B8B400F63893 /* WebviewVC.h */,
+				E80F0A0B1DF6B8B400F63893 /* WebviewVC.m */,
+				E80F0A0E1DF6B8F800F63893 /* OnlineMusicCell.h */,
+				E80F0A0F1DF6B8F800F63893 /* OnlineMusicCell.m */,
 			);
 			path = MUS;
 			sourceTree = "<group>";
@@ -1848,6 +1858,7 @@
 				A4D0FF2F1CF68F5E00B4708A /* GPUImageRGBErosionFilter.m in Sources */,
 				A4D0FF5A1CF68F5E00B4708A /* GPUImageWhiteBalanceFilter.m in Sources */,
 				A4D0FF391CF68F5E00B4708A /* GPUImageSingleComponentGaussianBlurFilter.m in Sources */,
+				E80F0A0D1DF6B8B400F63893 /* WebviewVC.m in Sources */,
 				A4F541421D12358C0023CDEC /* ContentCellModel.m in Sources */,
 				A48947C81D5473440015176C /* MJRefreshAutoNormalFooter.m in Sources */,
 				A4D0FF3D1CF68F5E00B4708A /* GPUImageSoftEleganceFilter.m in Sources */,
@@ -1930,6 +1941,7 @@
 				A4D0FEFC1CF68F5E00B4708A /* GPUImageHistogramGenerator.m in Sources */,
 				A4D0FF311CF68F5E00B4708A /* GPUImageRGBOpeningFilter.m in Sources */,
 				A48947C31D5473440015176C /* MJRefreshBackFooter.m in Sources */,
+				E80F0A101DF6B8F800F63893 /* OnlineMusicCell.m in Sources */,
 				A4D0FEDB1CF68F5E00B4708A /* GPUImageCropFilter.m in Sources */,
 				A4D0FF121CF68F5E00B4708A /* GPUImageMissEtikateFilter.m in Sources */,
 				A4D0FF571CF68F5E00B4708A /* GPUImageVignetteFilter.m in Sources */,
@@ -2095,7 +2107,7 @@
 					"$(PROJECT_DIR)/CFMusicLight/BLESDK",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xainkexun;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkx.smart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2120,7 +2132,7 @@
 					"$(PROJECT_DIR)/CFMusicLight/BLESDK",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xainkexun;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkx.smart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

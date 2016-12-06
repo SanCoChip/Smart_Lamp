@@ -148,6 +148,71 @@
                                 <color key="maximumTrackTintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skM-aW-yKp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OSJ-O7-nko">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MDj-QL-rHf">
+                                            <size key="itemSize" width="150" height="180"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onlineMusicCell" id="YJ4-aQ-PvI" customClass="OnlineMusicCell">
+                                                <rect key="frame" x="30" y="30" width="150" height="180"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OuJ-ae-kfp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="OuJ-ae-kfp" secondAttribute="height" multiplier="1:1" id="0WY-8J-aSf"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl6-sR-emq">
+                                                            <rect key="frame" x="0.0" y="150" width="150" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="dl6-sR-emq" secondAttribute="trailing" id="AmR-o1-xgd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dl6-sR-emq" secondAttribute="bottom" id="Ok7-ue-i6T"/>
+                                                    <constraint firstItem="dl6-sR-emq" firstAttribute="top" secondItem="OuJ-ae-kfp" secondAttribute="bottom" id="Q1S-Hx-YIA"/>
+                                                    <constraint firstItem="OuJ-ae-kfp" firstAttribute="top" secondItem="YJ4-aQ-PvI" secondAttribute="top" id="VoK-91-vIE"/>
+                                                    <constraint firstItem="OuJ-ae-kfp" firstAttribute="leading" secondItem="YJ4-aQ-PvI" secondAttribute="leading" id="k8K-It-SZZ"/>
+                                                    <constraint firstItem="dl6-sR-emq" firstAttribute="leading" secondItem="YJ4-aQ-PvI" secondAttribute="leading" id="vae-8m-rXS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OuJ-ae-kfp" secondAttribute="trailing" id="yaV-uc-D7r"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="imageView" destination="OuJ-ae-kfp" id="BWG-xC-yW4"/>
+                                                    <outlet property="titleLab" destination="dl6-sR-emq" id="E8g-ah-aR6"/>
+                                                    <segue destination="O6l-UA-Sd8" kind="push" identifier="webViewSegue" id="ift-Ig-qtZ"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="FFy-g8-P5d" id="dsx-Td-yZV"/>
+                                            <outlet property="delegate" destination="FFy-g8-P5d" id="uOk-hE-3J2"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OSJ-O7-nko" secondAttribute="bottom" id="5Sy-wg-9YE"/>
+                                    <constraint firstAttribute="trailing" secondItem="OSJ-O7-nko" secondAttribute="trailing" id="LR4-MJ-CkX"/>
+                                    <constraint firstItem="OSJ-O7-nko" firstAttribute="leading" secondItem="skM-aW-yKp" secondAttribute="leading" id="VN7-2o-eoc"/>
+                                    <constraint firstItem="OSJ-O7-nko" firstAttribute="top" secondItem="skM-aW-yKp" secondAttribute="top" id="gvw-GB-34u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -169,6 +234,7 @@
                             <constraint firstItem="i2d-8t-bVw" firstAttribute="top" secondItem="2Ku-wJ-PHB" secondAttribute="bottom" id="Ma6-Mm-CLR"/>
                             <constraint firstItem="8ph-oP-zO0" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="10" id="MxG-Z2-jdc"/>
                             <constraint firstItem="qgB-Ir-hp7" firstAttribute="top" secondItem="2R3-1f-N7I" secondAttribute="bottom" constant="10" id="RjF-9h-r9C"/>
+                            <constraint firstItem="skM-aW-yKp" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" id="SEJ-BS-RYA"/>
                             <constraint firstItem="rkb-TU-Jan" firstAttribute="leading" secondItem="mAn-5q-5cD" secondAttribute="trailing" constant="30" id="SPS-Tt-SHn"/>
                             <constraint firstAttribute="trailing" secondItem="yd4-0M-qhX" secondAttribute="trailing" constant="20" id="TbJ-Us-XEa"/>
                             <constraint firstAttribute="trailing" secondItem="bYq-vc-YhM" secondAttribute="trailing" id="UVY-3n-jhE"/>
@@ -183,6 +249,7 @@
                             <constraint firstItem="5eo-Am-43k" firstAttribute="top" secondItem="VHP-Jg-uLS" secondAttribute="bottom" constant="29" id="b5F-O8-B79"/>
                             <constraint firstItem="HHj-NP-DMZ" firstAttribute="centerY" secondItem="Mxe-fg-UeL" secondAttribute="centerY" id="bwa-RW-nPI"/>
                             <constraint firstItem="tVx-ll-kkA" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="15" id="cdS-YJ-fop"/>
+                            <constraint firstItem="skM-aW-yKp" firstAttribute="top" secondItem="jk5-wq-mvp" secondAttribute="bottom" id="d5h-fj-uzu"/>
                             <constraint firstItem="cXw-Sa-x9S" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="70" id="g6U-dM-I69"/>
                             <constraint firstItem="i2d-8t-bVw" firstAttribute="top" secondItem="tVx-ll-kkA" secondAttribute="bottom" constant="32" id="gKx-cw-5pd"/>
                             <constraint firstItem="qgB-Ir-hp7" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="54" id="gTw-7F-dtc"/>
@@ -198,16 +265,31 @@
                             <constraint firstAttribute="trailing" secondItem="2R3-1f-N7I" secondAttribute="trailing" constant="54" id="lnA-5m-P5f"/>
                             <constraint firstAttribute="trailing" secondItem="2Ku-wJ-PHB" secondAttribute="trailing" id="m6c-8m-1wZ"/>
                             <constraint firstItem="2R3-1f-N7I" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="54" id="o2G-Df-Z8f"/>
+                            <constraint firstAttribute="trailing" secondItem="skM-aW-yKp" secondAttribute="trailing" id="oLQ-zC-sXp"/>
                             <constraint firstItem="pXA-OK-bWk" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" id="paA-0V-Mis"/>
                             <constraint firstItem="bYq-vc-YhM" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" id="tAU-EF-Dqe"/>
                             <constraint firstItem="yd4-0M-qhX" firstAttribute="centerY" secondItem="PZf-EJ-DRW" secondAttribute="centerY" id="upM-h0-dNs"/>
+                            <constraint firstItem="i2d-8t-bVw" firstAttribute="top" secondItem="skM-aW-yKp" secondAttribute="bottom" id="wOK-vn-7iP"/>
                             <constraint firstAttribute="trailing" secondItem="qgB-Ir-hp7" secondAttribute="trailing" constant="54" id="xJ8-sJ-hRM"/>
                             <constraint firstItem="Mxe-fg-UeL" firstAttribute="leading" secondItem="FGC-6H-d7i" secondAttribute="leading" constant="13" id="z6e-EN-X98"/>
                             <constraint firstAttribute="trailing" secondItem="Sku-ul-bpX" secondAttribute="trailing" id="znB-af-kma"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="wT8-cN-Zrl"/>
-                    <navigationItem key="navigationItem" id="24u-9i-0Nb"/>
+                    <navigationItem key="navigationItem" id="24u-9i-0Nb">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Mfo-Th-qwu">
+                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="本地音乐"/>
+                                <segment title="云音乐"/>
+                            </segments>
+                            <connections>
+                                <action selector="chooseSegment:" destination="FFy-g8-P5d" eventType="valueChanged" id="5lB-Ov-Woa"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="ImageView" destination="cXw-Sa-x9S" id="PNi-81-lbi"/>
                         <outlet property="List" destination="HHj-NP-DMZ" id="EMa-Lg-mbi"/>
@@ -219,6 +301,7 @@
                         <outlet property="TotalTime" destination="8ph-oP-zO0" id="fdf-Ip-j7X"/>
                         <outlet property="changeVolume" destination="qgB-Ir-hp7" id="mfO-CX-PLy"/>
                         <outlet property="musicName" destination="Sku-ul-bpX" id="vF6-1j-8Hy"/>
+                        <outlet property="onlineMusicBackView" destination="skM-aW-yKp" id="jAa-q8-gtM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dn-VA-JCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,7 +316,7 @@
                         <viewControllerLayoutGuide type="top" id="7uP-8w-kvs"/>
                         <viewControllerLayoutGuide type="bottom" id="l1y-Pp-04i"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="n8k-xU-n05">
+                    <view key="view" contentMode="scaleToFill" id="n8k-xU-n05">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -257,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emB-WG-24k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4512" y="355"/>
+            <point key="canvasLocation" x="-4331" y="1160"/>
         </scene>
         <!--彩灯-->
         <scene sceneID="KsU-P0-R4J">
@@ -1177,6 +1260,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mh1-P4-uCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5644" y="355"/>
+        </scene>
+        <!--WebviewVC-->
+        <scene sceneID="TEa-gD-41E">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="O6l-UA-Sd8" customClass="WebviewVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="10l-zV-uO5"/>
+                        <viewControllerLayoutGuide type="bottom" id="1oU-mU-wft"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WT0-1O-2C6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKh-gt-hHt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nKh-gt-hHt" firstAttribute="leading" secondItem="WT0-1O-2C6" secondAttribute="leading" id="2HY-dv-ybI"/>
+                            <constraint firstItem="nKh-gt-hHt" firstAttribute="top" secondItem="WT0-1O-2C6" secondAttribute="top" id="7Et-hh-56e"/>
+                            <constraint firstAttribute="trailing" secondItem="nKh-gt-hHt" secondAttribute="trailing" id="Nk8-bl-AoJ"/>
+                            <constraint firstItem="1oU-mU-wft" firstAttribute="top" secondItem="nKh-gt-hHt" secondAttribute="bottom" id="UIg-f5-QUX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QAP-d2-ZFt"/>
+                    <connections>
+                        <outlet property="onlineMusicWebView" destination="nKh-gt-hHt" id="XFB-vI-gJu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chA-Ib-MhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4675" y="355"/>
         </scene>
     </scenes>
     <resources>
