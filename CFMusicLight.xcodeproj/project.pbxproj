@@ -14,12 +14,8 @@
 		0556A6621CDA2E2400A56121 /* MSColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0556A65E1CDA2E2400A56121 /* MSColorUtils.m */; };
 		0556A6631CDA2E2400A56121 /* MSColorWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0556A6601CDA2E2400A56121 /* MSColorWheelView.m */; };
 		0556A6731CDAEED700A56121 /* JRBLESDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0556A6721CDAEED700A56121 /* JRBLESDK.m */; };
-		3B40825F1DF553610079C30C /* baiduMusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4082551DF553610079C30C /* baiduMusicVC.m */; };
-		3B4082601DF553610079C30C /* ChildrenEducationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4082571DF553610079C30C /* ChildrenEducationVC.m */; };
-		3B4082611DF553610079C30C /* CoolDogMusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4082591DF553610079C30C /* CoolDogMusicVC.m */; };
-		3B4082621DF553610079C30C /* HimalayasVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B40825B1DF553610079C30C /* HimalayasVC.m */; };
-		3B4082631DF553610079C30C /* QQMusciVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B40825C1DF553610079C30C /* QQMusciVC.m */; };
-		3B4082641DF553610079C30C /* RadioVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B40825E1DF553610079C30C /* RadioVC.m */; };
+		3BB16C5D1DF664B600606A41 /* WebviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB16C5C1DF664B600606A41 /* WebviewVC.m */; };
+		3BB16C611DF6664D00606A41 /* OnlineMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB16C601DF6664D00606A41 /* OnlineMusicCell.m */; };
 		6442192D499BFF5A003C7285 /* libPods-CFMusicLight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB00FC379604C82AAACF83F /* libPods-CFMusicLight.a */; };
 		A40CE6781D2127E0005ACD3E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40CE6771D2127E0005ACD3E /* MediaPlayer.framework */; };
 		A42BDCD11D0664EF003171C6 /* SHWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A42BDCD01D0664EF003171C6 /* SHWaterflowLayout.m */; };
@@ -283,18 +279,10 @@
 		0556A6711CDAEED700A56121 /* JRBLESDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRBLESDK.h; sourceTree = "<group>"; };
 		0556A6721CDAEED700A56121 /* JRBLESDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRBLESDK.m; sourceTree = "<group>"; };
 		1769CC835761125BA2136C8C /* Pods-CFMusicLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CFMusicLight.release.xcconfig"; path = "Pods/Target Support Files/Pods-CFMusicLight/Pods-CFMusicLight.release.xcconfig"; sourceTree = "<group>"; };
-		3B4082541DF553610079C30C /* baiduMusicVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baiduMusicVC.h; sourceTree = "<group>"; };
-		3B4082551DF553610079C30C /* baiduMusicVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baiduMusicVC.m; sourceTree = "<group>"; };
-		3B4082561DF553610079C30C /* ChildrenEducationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildrenEducationVC.h; sourceTree = "<group>"; };
-		3B4082571DF553610079C30C /* ChildrenEducationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildrenEducationVC.m; sourceTree = "<group>"; };
-		3B4082581DF553610079C30C /* CoolDogMusicVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolDogMusicVC.h; sourceTree = "<group>"; };
-		3B4082591DF553610079C30C /* CoolDogMusicVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolDogMusicVC.m; sourceTree = "<group>"; };
-		3B40825A1DF553610079C30C /* HimalayasVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HimalayasVC.h; sourceTree = "<group>"; };
-		3B40825B1DF553610079C30C /* HimalayasVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HimalayasVC.m; sourceTree = "<group>"; };
-		3B40825C1DF553610079C30C /* QQMusciVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQMusciVC.m; sourceTree = "<group>"; };
-		3B40825D1DF553610079C30C /* RadioVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioVC.h; sourceTree = "<group>"; };
-		3B40825E1DF553610079C30C /* RadioVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioVC.m; sourceTree = "<group>"; };
-		3B4082651DF553750079C30C /* QQMusciVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQMusciVC.h; sourceTree = "<group>"; };
+		3BB16C5B1DF664B600606A41 /* WebviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewVC.h; sourceTree = "<group>"; };
+		3BB16C5C1DF664B600606A41 /* WebviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewVC.m; sourceTree = "<group>"; };
+		3BB16C5F1DF6664D00606A41 /* OnlineMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineMusicCell.h; sourceTree = "<group>"; };
+		3BB16C601DF6664D00606A41 /* OnlineMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineMusicCell.m; sourceTree = "<group>"; };
 		A40CE6771D2127E0005ACD3E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A41681021CE1B6CF00D29507 /* LGAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGAlarmViewController.h; path = ../LGAlarmViewController.h; sourceTree = "<group>"; };
 		A42BDCCF1D0664EF003171C6 /* SHWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWaterflowLayout.h; sourceTree = "<group>"; };
@@ -876,20 +864,20 @@
 		3B40824D1DF519030079C30C /* OnlineVC */ = {
 			isa = PBXGroup;
 			children = (
-				3B4082651DF553750079C30C /* QQMusciVC.h */,
-				3B40825C1DF553610079C30C /* QQMusciVC.m */,
-				3B4082541DF553610079C30C /* baiduMusicVC.h */,
-				3B4082551DF553610079C30C /* baiduMusicVC.m */,
-				3B40825A1DF553610079C30C /* HimalayasVC.h */,
-				3B40825B1DF553610079C30C /* HimalayasVC.m */,
-				3B4082581DF553610079C30C /* CoolDogMusicVC.h */,
-				3B4082591DF553610079C30C /* CoolDogMusicVC.m */,
-				3B40825D1DF553610079C30C /* RadioVC.h */,
-				3B40825E1DF553610079C30C /* RadioVC.m */,
-				3B4082561DF553610079C30C /* ChildrenEducationVC.h */,
-				3B4082571DF553610079C30C /* ChildrenEducationVC.m */,
+				3BB16C5E1DF6663400606A41 /* OnlineMusicCell */,
+				3BB16C5B1DF664B600606A41 /* WebviewVC.h */,
+				3BB16C5C1DF664B600606A41 /* WebviewVC.m */,
 			);
 			name = OnlineVC;
+			sourceTree = "<group>";
+		};
+		3BB16C5E1DF6663400606A41 /* OnlineMusicCell */ = {
+			isa = PBXGroup;
+			children = (
+				3BB16C5F1DF6664D00606A41 /* OnlineMusicCell.h */,
+				3BB16C601DF6664D00606A41 /* OnlineMusicCell.m */,
+			);
+			name = OnlineMusicCell;
 			sourceTree = "<group>";
 		};
 		571439E437280D4182DC2584 /* Pods */ = {
@@ -1768,6 +1756,7 @@
 				A4D0FF281CF68F5E00B4708A /* GPUImagePolkaDotFilter.m in Sources */,
 				A4D0FF221CF68F5E00B4708A /* GPUImagePerlinNoiseFilter.m in Sources */,
 				A4D0FF4A1CF68F5E00B4708A /* GPUImageThresholdedNonMaximumSuppressionFilter.m in Sources */,
+				3BB16C5D1DF664B600606A41 /* WebviewVC.m in Sources */,
 				A48947C71D5473440015176C /* MJRefreshAutoGifFooter.m in Sources */,
 				A4D0FF4D1CF68F5E00B4708A /* GPUImageToneCurveFilter.m in Sources */,
 				A44C1F311D337AA300821595 /* SVProgressAnimatedView.m in Sources */,
@@ -1829,7 +1818,6 @@
 				A4D0FED01CF68F5E00B4708A /* GPUImageCGAColorspaceFilter.m in Sources */,
 				A4D0FF5B1CF68F5E00B4708A /* GPUImageXYDerivativeFilter.m in Sources */,
 				A4D0FEF11CF68F5E00B4708A /* GPUImageGaussianBlurPositionFilter.m in Sources */,
-				3B4082601DF553610079C30C /* ChildrenEducationVC.m in Sources */,
 				A4D0FF481CF68F5E00B4708A /* GPUImageThreeInputFilter.m in Sources */,
 				A4D0FF2B1CF68F5E00B4708A /* GPUImageRawDataInput.m in Sources */,
 				A48947C61D5473440015176C /* MJRefreshHeader.m in Sources */,
@@ -1845,7 +1833,6 @@
 				A4D0FEE41CF68F5E00B4708A /* GPUImageDivideBlendFilter.m in Sources */,
 				A4D0FD481CF68BBF00B4708A /* README.md in Sources */,
 				A4D0FEF31CF68F5E00B4708A /* GPUImageGlassSphereFilter.m in Sources */,
-				3B40825F1DF553610079C30C /* baiduMusicVC.m in Sources */,
 				A4D0FF1C1CF68F5E00B4708A /* GPUImageNormalBlendFilter.m in Sources */,
 				A4D0FF601CF68F5E00B4708A /* GPUImageView.m in Sources */,
 				A4D0FEF01CF68F5E00B4708A /* GPUImageGaussianBlurFilter.m in Sources */,
@@ -1870,7 +1857,6 @@
 				A4D0FED81CF68F5E00B4708A /* GPUImageColorMatrixFilter.m in Sources */,
 				A4D0FF511CF68F5E00B4708A /* GPUImageTwoInputFilter.m in Sources */,
 				A44C1F341D337AA300821595 /* SVRadialGradientLayer.m in Sources */,
-				3B4082631DF553610079C30C /* QQMusciVC.m in Sources */,
 				A4D0FF3A1CF68F5E00B4708A /* GPUImageSketchFilter.m in Sources */,
 				A4FC67861D7D19CC00B91199 /* UILabel+Extension.m in Sources */,
 				A4D0FF361CF68F5E00B4708A /* GPUImageSharpenFilter.m in Sources */,
@@ -1928,7 +1914,6 @@
 				A4D0FEE61CF68F5E00B4708A /* GPUImageErosionFilter.m in Sources */,
 				A4D0FF021CF68F5E00B4708A /* GPUImageKuwaharaFilter.m in Sources */,
 				A4D0FECD1CF68F5E00B4708A /* GPUImageBuffer.m in Sources */,
-				3B4082641DF553610079C30C /* RadioVC.m in Sources */,
 				A4D0FF051CF68F5E00B4708A /* GPUImageLaplacianFilter.m in Sources */,
 				A4D0FEED1CF68F5E00B4708A /* GPUImageFilterGroup.m in Sources */,
 				A4D0FD491CF68BBF00B4708A /* View+MASAdditions.m in Sources */,
@@ -1972,11 +1957,11 @@
 				A4D0FEFC1CF68F5E00B4708A /* GPUImageHistogramGenerator.m in Sources */,
 				A4D0FF311CF68F5E00B4708A /* GPUImageRGBOpeningFilter.m in Sources */,
 				A48947C31D5473440015176C /* MJRefreshBackFooter.m in Sources */,
+				3BB16C611DF6664D00606A41 /* OnlineMusicCell.m in Sources */,
 				A4D0FEDB1CF68F5E00B4708A /* GPUImageCropFilter.m in Sources */,
 				A4D0FF121CF68F5E00B4708A /* GPUImageMissEtikateFilter.m in Sources */,
 				A4D0FF571CF68F5E00B4708A /* GPUImageVignetteFilter.m in Sources */,
 				A4D0FF461CF68F5E00B4708A /* GPUImageTextureInput.m in Sources */,
-				3B4082611DF553610079C30C /* CoolDogMusicVC.m in Sources */,
 				A4D0FF2A1CF68F5E00B4708A /* GPUImagePrewittEdgeDetectionFilter.m in Sources */,
 				A48947D11D5473440015176C /* MJRefreshConst.m in Sources */,
 				A48947D31D5473440015176C /* UIScrollView+MJExtension.m in Sources */,
@@ -1987,7 +1972,6 @@
 				A440EECF1D8BD2580096B45A /* LGFMBaseViewController.m in Sources */,
 				A4D0FF261CF68F5E00B4708A /* GPUImagePoissonBlendFilter.m in Sources */,
 				A48947D41D5473440015176C /* UIScrollView+MJRefresh.m in Sources */,
-				3B4082621DF553610079C30C /* HimalayasVC.m in Sources */,
 				A4D0FD421CF68BBF00B4708A /* MASConstraintMaker.m in Sources */,
 				A4D0FF421CF68F5E00B4708A /* GPUImageStillCamera.m in Sources */,
 				A4D0FF441CF68F5E00B4708A /* GPUImageSubtractBlendFilter.m in Sources */,
@@ -2139,7 +2123,7 @@
 					"$(PROJECT_DIR)/CFMusicLight/BLESDK",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xainkexun;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkx.smart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2164,7 +2148,7 @@
 					"$(PROJECT_DIR)/CFMusicLight/BLESDK",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xainkexun;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xkx.smart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

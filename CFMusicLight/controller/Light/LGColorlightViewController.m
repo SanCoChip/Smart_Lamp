@@ -793,7 +793,7 @@ int YellowValue;
 //        [self adjustColorByteRed:0 Green:0 Blue:0 White:2 Yellow:5];
         [self switchLightON];
         
-        self.ColorTempValue.value = 0.43;
+        self.ColorTempValue.value = 0.5;
         self.Rgb_SliderValue.value = 0.14;
         [self Touch];
         

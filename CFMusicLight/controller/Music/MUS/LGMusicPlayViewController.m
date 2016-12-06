@@ -18,8 +18,7 @@
 #import "ContentCellModel.h"
 #import "SandBox.h"
 #import "LGSingleLight.h"
-#import "QQMusciVC.h"
-#import "baiduMusicVC.h"
+
 
 //#import "LGOnlineVC.h"
 
@@ -44,6 +43,13 @@
     //判断是不是跳到歌曲列表
     BOOL isPush;
     
+    NSArray *_musicNameArr;
+    NSArray *_urlStringArr;
+    
+    WebviewVC *webBackVC;
+    
+    
+    
 }
 
 
@@ -55,6 +61,7 @@
 //@property (weak, nonatomic) IBOutlet UIImageView *ImageView;
 
 //播放顶部
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *playTopLayout;
 
 
@@ -357,7 +364,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    QQMusciVC*qq =[QQMusciVC new];
+     [self initData];
+  
     //分段控制
     [self segmented:self.segmentedControl];
     
@@ -429,15 +437,84 @@
     //添加监听
     [self addObserver];
     
-//    //初始化模式
-//    if (!modleNumber) {
-//        modleNumber = 0;
-//    }
-//    
+    
     [self initVolume];
     
     
 }
+
+-(void)initData{
+
+    _musicNameArr = [NSArray arrayWithObjects:
+                     @"QQ音乐",
+                     @"百度音乐",
+                     @"喜马拉雅",
+                     @"酷狗音乐",
+                     @"电台",
+                     @"幼儿早教",
+                     nil];
+    
+    
+    _urlStringArr = [NSArray arrayWithObjects:
+                     @"https://y.qq.com",
+                     @"http://music.baidu.com",
+                     @"http://www.ximalaya.com/explore/",
+                     @"http://www.kugou.com",
+                     @"http://m.lizhi.fm",
+                     @"http://m.ximalaya.com/album-tag/kid",
+                     nil];
+    
+
+
+}
+
+
+
+#pragma mark -  CollectionView_DataSource
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return _musicNameArr.count;
+    
+    
+}
+
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    OnlineMusicCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"onlineMusicCell" forIndexPath:indexPath];
+    
+    cell.imageView.image = [UIImage imageNamed:_musicNameArr[indexPath.row]];
+    cell.titleLab.text =  _musicNameArr[indexPath.row];
+    
+    
+    return cell;
+    
+}
+
+
+
+
+
+
+#pragma mark -  CollectionView_Delegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    webBackVC.urlString = _urlStringArr[indexPath.row];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -683,7 +760,7 @@
             //重新初始化播放器URL
             if (HaveMusic) {
                 //如果有本地音乐，播放音乐
-                if (lastMusicID > mediaItems.count) {
+                if (lastMusicID >= mediaItems.count) {
                     lastMusicID = 0;
                 }
                 
@@ -759,10 +836,13 @@
     
     
     
-    if ([segue.identifier isEqualToString:@"musicVCSegue"]||[segue.identifier isEqualToString:@"baiduVCSegue"]||[segue.identifier isEqualToString:@"HimalayasVCSegue"]||[segue.identifier isEqualToString:@"CoolDogMusicVCSegue"]||[segue.identifier isEqualToString:@"RadioVCSegue"]||[segue.identifier isEqualToString:@"ChildrenEducationVCVCSegue"]) {
+   
+    if ([segue.identifier isEqualToString:@"webViewSegue"]) {
         
+        
+        webBackVC = (WebviewVC *)segue.destinationViewController;
     }else{
-    
+        
         LGMusic* vc = segue.destinationViewController;
         //设代理
         vc.delegate = self;
@@ -770,8 +850,9 @@
         NSUserDefaults *userDefaults= [NSUserDefaults standardUserDefaults];
         [userDefaults setInteger:lastMusicID forKey:@"lastMusicKey"];
     }
+
     
-   
+
     
     
     
@@ -922,6 +1003,7 @@
     [self pauseAction:nil];
     
 }
+
 - (IBAction)segmented:(UISegmentedControl *)sender {
     
      NSInteger selectedIndex = sender.selectedSegmentIndex;
@@ -948,7 +1030,6 @@
     
     
 }
-
 
 
 

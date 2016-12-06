@@ -11,9 +11,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import "LGMusic.h"
 #import "BLE Tool.h"
+#import "WebviewVC.h"
+#import "OnlineMusicCell.h"
 static AVAudioPlayer *player = nil;
 #import "LGFMBaseViewController.h"
-@interface LGMusicPlayViewController :LGFMBaseViewController <LGMusicDeleagte>//模式选择
+@interface LGMusicPlayViewController :LGFMBaseViewController <LGMusicDeleagte,UICollectionViewDelegate,UICollectionViewDataSource>//模式选择
 
 
 
