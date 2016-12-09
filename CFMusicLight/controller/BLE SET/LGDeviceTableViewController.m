@@ -55,6 +55,7 @@ static NSInteger CharacterCount = 21;
     UIActivityIndicatorView *_isConnectView;
     NSString *_oldName;
     CBPeripheral *_changePeripheral;
+    CBPeripheral *_connectedPeripheral;
     
 }
 - (void)viewDidLoad {
@@ -626,7 +627,11 @@ static NSInteger CharacterCount = 21;
   
         [self.editBtn removeFromSuperview];
 
-        [_Device_list reloadData];
+        //不会自动搜索回连
+        //        [_Device_list reloadData];
+        
+        //自动搜索立马提示回连
+        [self changingNameSuccess];
         
         
         
@@ -655,7 +660,36 @@ static NSInteger CharacterCount = 21;
 
 
 
-
+-(void)reconnectDeviceAlertController:(NSString *)reconnectDeviceName{
+    
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"是否要重连%@设备?",reconnectDeviceName] message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction *commitAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        
+        [self retrievePeriperal];
+        
+    }];
+    
+    
+    
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    
+    
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:commitAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+}
 
 
 
@@ -735,7 +769,12 @@ static NSInteger CharacterCount = 21;
 -(void)retrievePeriperal{
     
 //    [_bleManager.bleTool connectPeripheral:_changePeripheral andOptions:nil];
-
+    
+    
+    [_bleManager.bleTool connectPeripheral:_connectedPeripheral andOptions:nil];
+    _ImageBG.hidden = YES;
+    self.btn_Image_Bg.hidden = NO;
+    [_ImageBG stopRotate];
 }
 
 
@@ -958,6 +997,9 @@ static NSInteger CharacterCount = 21;
 - (void)didSearchPeripheralNotification:(NSNotification*)notification
 {
     
+    NSString * connectedPeripheralUUID = [[NSUserDefaults standardUserDefaults] objectForKey:@"ConnectedBLEDevice"];
+    
+    
     NSDictionary *dict = notification.userInfo;
     CBPeripheral * peripheral = (CBPeripheral *)[dict objectForKey:@"peripheral"];
     NSString *localName = (NSString *)[dict objectForKey:@"localName"];
@@ -980,9 +1022,23 @@ static NSInteger CharacterCount = 21;
     }
     
     //改名重连
-    if (peripheral == _changePeripheral) {
-        [self retrievePeriperal];
+//    if (peripheral == _changePeripheral) {
+//        [self retrievePeriperal];
+//    }
+    
+    
+    
+    if ([peripheral.identifier.UUIDString isEqualToString: connectedPeripheralUUID]) {
+        
+        _connectedPeripheral = peripheral;
+        
+        [self reconnectDeviceAlertController:peripheral.name];
+        
     }
+
+    
+    
+    
     
     [_bleDevices addObject:peripheral];
     [_bleDeviceNames addObject:localName];

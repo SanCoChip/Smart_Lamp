@@ -23,7 +23,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.9</string>
+	<string>2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -34,7 +34,12 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>2</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>appleMusicDescription</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
@@ -45,11 +50,6 @@
 	<string>appleLocationDescription</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>applePhotoDescription</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

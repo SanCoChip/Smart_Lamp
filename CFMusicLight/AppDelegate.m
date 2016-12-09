@@ -22,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    [NSThread sleepForTimeInterval:3.0];//设置启动页面时间
+    [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
 
     
     //抽屉方法

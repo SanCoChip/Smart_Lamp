@@ -196,11 +196,9 @@ BOOL isFirstInto=FALSE;
      */
     [[NSNotificationCenter defaultCenter] postNotificationName:BLEConnectPeripheralNotification object:nil userInfo:dict];
     
-//    //存
-//    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-//    [defaults setObject:peripheral.identifier.UUIDString forKey:@"BLEDevice"];
-//    [defaults synchronize];
-//    NSLog(@"%@",defaults);
+    //存
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setObject:peripheral.identifier.UUIDString forKey:@"ConnectedBLEDevice"];
     
     
     
