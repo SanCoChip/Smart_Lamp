@@ -31,7 +31,7 @@
         switch (status) {
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 NSLog(@"这是WiFi");
-                [JPProgressHUD showMessage:@"当前网络为WiFi"];
+//                [JPProgressHUD showMessage:@"当前网络为WiFi"];
                 
                 break;
             case AFNetworkReachabilityStatusNotReachable:
@@ -44,7 +44,7 @@
                 break;
              case AFNetworkReachabilityStatusReachableViaWWAN:
                 NSLog(@"当前是蜂窝网络");
-                [JPProgressHUD showMessage:@"当前网络为蜂窝网络"];
+//                [JPProgressHUD showMessage:@"当前网络为蜂窝网络"];
             default:
                 
                 break;
