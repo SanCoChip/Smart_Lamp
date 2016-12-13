@@ -260,6 +260,7 @@
 		A4FF556A1CF459FA00239CC9 /* LGAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FF55691CF459FA00239CC9 /* LGAlarmViewController.m */; };
 		A4FFED621D001D84004580CE /* BLE Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FFED611D001D84004580CE /* BLE Tool.m */; };
 		CF831DB51D86864100DD9382 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF831DB41D86864100DD9382 /* Images.xcassets */; };
+		CF909DE71DFFC6810061CEE1 /* JPProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CF909DE61DFFC6810061CEE1 /* JPProgressHUD.m */; };
 		E8CDA7D61DB9BB540068F114 /* LGSynchronizationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDA7D51DB9BB540068F114 /* LGSynchronizationTime.m */; };
 /* End PBXBuildFile section */
 
@@ -757,6 +758,8 @@
 		A4FFED611D001D84004580CE /* BLE Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BLE Tool.m"; sourceTree = "<group>"; };
 		B266EAF1786643E97F8D9769 /* Pods-CFMusicLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CFMusicLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CFMusicLight/Pods-CFMusicLight.debug.xcconfig"; sourceTree = "<group>"; };
 		CF831DB41D86864100DD9382 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF909DE51DFFC6810061CEE1 /* JPProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPProgressHUD.h; sourceTree = "<group>"; };
+		CF909DE61DFFC6810061CEE1 /* JPProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPProgressHUD.m; sourceTree = "<group>"; };
 		DDB00FC379604C82AAACF83F /* libPods-CFMusicLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CFMusicLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CDA7D41DB9BB540068F114 /* LGSynchronizationTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSynchronizationTime.h; sourceTree = "<group>"; };
 		E8CDA7D51DB9BB540068F114 /* LGSynchronizationTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSynchronizationTime.m; sourceTree = "<group>"; };
@@ -1003,6 +1006,8 @@
 		A46596AD1CE5CB29000C859D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CF909DE51DFFC6810061CEE1 /* JPProgressHUD.h */,
+				CF909DE61DFFC6810061CEE1 /* JPProgressHUD.m */,
 				A48947931D5473430015176C /* MJRefresh */,
 				A44C1F251D337AA300821595 /* SVProgressHUD */,
 				A4D0FD6F1CF68F5D00B4708A /* GPUImage */,
@@ -1962,6 +1967,7 @@
 				A4D0FF121CF68F5E00B4708A /* GPUImageMissEtikateFilter.m in Sources */,
 				A4D0FF571CF68F5E00B4708A /* GPUImageVignetteFilter.m in Sources */,
 				A4D0FF461CF68F5E00B4708A /* GPUImageTextureInput.m in Sources */,
+				CF909DE71DFFC6810061CEE1 /* JPProgressHUD.m in Sources */,
 				A4D0FF2A1CF68F5E00B4708A /* GPUImagePrewittEdgeDetectionFilter.m in Sources */,
 				A48947D11D5473440015176C /* MJRefreshConst.m in Sources */,
 				A48947D31D5473440015176C /* UIScrollView+MJExtension.m in Sources */,

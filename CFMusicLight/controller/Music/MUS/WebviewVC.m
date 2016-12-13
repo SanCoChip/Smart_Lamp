@@ -8,6 +8,8 @@
 
 #import "WebviewVC.h"
 #import "LGMusicPlayViewController.h"
+#import <AFNetworking.h>
+#import "JPProgressHUD.h"
 @interface WebviewVC ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *onlineMusicWebView;
 
@@ -22,9 +24,39 @@
     self.onlineMusicWebView.delegate =self;
 
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[AFNetworkReachabilityManager sharedManager]startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@"这是WiFi");
+                [JPProgressHUD showMessage:@"当前网络为WiFi"];
+                
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"当前无网络");
+                [JPProgressHUD showMessage:@"当前无网络"];
+                break;
+            case AFNetworkReachabilityStatusUnknown:
+                NSLog(@"当前网络未知");
+                [JPProgressHUD showMessage:@"当前网络未知"];
+                break;
+             case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@"当前是蜂窝网络");
+                [JPProgressHUD showMessage:@"当前网络为蜂窝网络"];
+            default:
+                
+                break;
+        }
+    }];
+    [self performSelector:@selector(checknetWork) withObject:nil afterDelay:0];
+    
+}
 
+-(void)checknetWork{
 
-
+}
 -(void)viewWillDisappear:(BOOL)animated{
 
     [super viewWillDisappear:animated];
